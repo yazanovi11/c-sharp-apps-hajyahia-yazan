@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace c_sharp_apps_hajyahia_yazan.Sportapp
 {
-    public class SportAppMain
+    public class Game
     {
-        public static void MainEntry()
-        {
-            Console.WriteLine("Test 1 - Champions League");
-            TestSportApp.Test1();
-        }
+        private Team teamA;
+        private Team teamB;
+        private int goalsTeamA;
+        private int goalsTeamB;
+        
     }
 }
