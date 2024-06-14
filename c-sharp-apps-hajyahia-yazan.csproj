@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banckapp\Account.cs" />
     <Compile Include="Banckapp\BanckAppMain.cs" />
+    <Compile Include="Banckapp\Owner.cs" />
+    <Compile Include="Banckapp\TestAccount.cs" />
     <Compile Include="common\system\shared\ProcessManger.cs" />
     <Compile Include="Draftapp\DraftAppMain.cs" />
     <Compile Include="Program.cs" />

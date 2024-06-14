@@ -11,6 +11,7 @@ namespace c_sharp_apps_hajyahia_yazan.Banckapp
         public static void MainEntry()
         {
             Console.WriteLine("BanckApp");
+            TestAccount.Test1();
         }
     }
 }
