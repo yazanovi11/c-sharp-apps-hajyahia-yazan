@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace c_sharp_apps_hajyahia_yazan.Transportationapp
 {
-    public class TransportationAppMain
+    public class PassengersAirplain
     {
-        public static void MainEntry()
-        {
-            Console.WriteLine(" TransportationApp");
-        }
+        private int enginesNum;
+        private int wingLength;
+        private int rows;
+        private int columns;
     }
 }

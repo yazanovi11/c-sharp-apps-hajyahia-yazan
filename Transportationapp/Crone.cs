@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace c_sharp_apps_hajyahia_yazan.Transportationapp
 {
-    public class TransportationAppMain
+    public class Crone
     {
-        public static void MainEntry()
-        {
-            Console.WriteLine(" TransportationApp");
-        }
+        private readonly int rows, columns;
     }
 }

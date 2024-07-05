@@ -55,6 +55,12 @@
     <Compile Include="Sportapp\SportAppMain.cs" />
     <Compile Include="Sportapp\Team.cs" />
     <Compile Include="Sportapp\TestSportApp.cs" />
+    <Compile Include="Transportationapp\Bus.cs" />
+    <Compile Include="Transportationapp\Crone.cs" />
+    <Compile Include="Transportationapp\MonitorTransportation.cs" />
+    <Compile Include="Transportationapp\PassengersAirplain.cs" />
+    <Compile Include="Transportationapp\PassengersTrain.cs" />
+    <Compile Include="Transportationapp\PublicVehicle.cs" />
     <Compile Include="Transportationapp\TransportationAppMain.cs" />
   </ItemGroup>
   <ItemGroup>
