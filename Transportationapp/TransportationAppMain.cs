@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace c_sharp_apps_hajyahia_yazan.Transportationapp
+
+namespace c_sharp_apps_Masarwa_Shadi.TransportationApp
 {
-    internal class TransportationAppMain
+    public class TransportationAppMain
     {
         public static void MainEntry()
         {
-            Console.WriteLine(" TransportationApp");
+            MonitorTransportation.Test1();
+            Console.ReadKey();
         }
     }
 }
