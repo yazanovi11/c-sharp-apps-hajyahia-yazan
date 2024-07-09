@@ -7,12 +7,10 @@ namespace c_sharp_apps_Masarwa_Shadi.TransportationApp
 {
     class MonitorTransportation
     {
-        public void Test1()
         public static void Test1()
         {
             //TODO: 
 
-            //10 tests:
             //some tests:
             // public PublicVehicle(int line, int id, int maxSpeed, int seats)
             PublicVehicle p1 = new PublicVehicle(18, 8099065, 50, 80);
@@ -21,7 +19,7 @@ namespace c_sharp_apps_Masarwa_Shadi.TransportationApp
             PassengersAirplain passengersAirplain1 = new PassengersAirplain(605, 987653, 4, 10, 60, 6);
 
             Crone crone1 = new Crone(20, 5);
-            PassengersTrain passengersTrain1 = new PassengersTrain(65, 9998774, 250, 30,crone1, 5);
+            PassengersTrain passengersTrain1 = new PassengersTrain(65, 9998774, 250, 30, crone1, 5);
             bool allPassed = true;
 
             //test max speed
@@ -186,6 +184,8 @@ namespace c_sharp_apps_Masarwa_Shadi.TransportationApp
 
 
 
+
+
             Console.WriteLine("\n*********************************\n");
 
 
@@ -200,8 +200,22 @@ namespace c_sharp_apps_Masarwa_Shadi.TransportationApp
 
             }
             Console.WriteLine("\n*********************************\n");
+            Console.WriteLine("Self Tasts");
+            Console.WriteLine("\n*********************************\n");
+            Console.WriteLine("Check ToString() Methods\n");
+            Console.WriteLine(bus);
+            Console.WriteLine(passengersAirplain1);
+            Console.WriteLine(passengersTrain1);
+            Console.WriteLine("\n*********************************\n");
+            Console.WriteLine("Check Get Off the vehicle");
 
-            Console.ReadKey();
+           
+          
+           
+
+
+           
+
         }
     }
 }

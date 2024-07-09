@@ -11,7 +11,6 @@ namespace c_sharp_apps_Masarwa_Shadi.TransportationApp
     {
         public static void MainEntry()
         {
-            Console.WriteLine("TransportationApp");
             MonitorTransportation.Test1();
             Console.ReadKey();
         }

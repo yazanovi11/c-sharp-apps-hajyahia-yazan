@@ -7,16 +7,11 @@ namespace c_sharp_apps_Masarwa_Shadi.TransportationApp
 {
     public class PublicVehicle
     {
-        private int line=0;
-        private int id=0;
-        protected int maxSpeed=0;
-        private int seats= 0;
         private int line = 0;
         private int id = 0;
         protected int maxSpeed = 0;
         private int seats = 0;
         private int currentPassengers = 0;
-        private int rejrejecetedPassengers;
         private int rejectedPassengers = 0;
         private bool hasRoom = true;
 
@@ -32,22 +27,25 @@ namespace c_sharp_apps_Masarwa_Shadi.TransportationApp
         }
 
         public PublicVehicle(int line, int id)
-@@ -29,47 +36,52 @@ public PublicVehicle(int line, int id, int maxSpeed, int seats)
         {
             this.line = line;
             this.id = id;
-            this.maxSpeed = maxSpeed;
+        }
+        public PublicVehicle(int line, int id, int maxSpeed, int seats)
+        {
+            this.line = line;
+            this.id = id;
             this.seats = seats;
             MaxSpeed = maxSpeed;
         }
 
         public int Line { get => line; set => line = value; }
         public int Id { get => id; set => id = value; }
-        public int MaxSpeed { get => maxSpeed; }
         public virtual int MaxSpeed
         {
-            get => maxSpeed; 
-            set {
+            get => maxSpeed;
+            set
+            {
                 int vehicleMaxSpeed = 40;
                 if (value <= vehicleMaxSpeed && value > 0)
                     maxSpeed = value;
@@ -55,45 +53,60 @@ namespace c_sharp_apps_Masarwa_Shadi.TransportationApp
         }
         public int Seats { get => seats; set => seats = value; }
         public int CurrentPassengers { get => currentPassengers; set => currentPassengers = value; }
-        public int RejrejecetedPassengers { get => rejrejecetedPassengers; set => rejrejecetedPassengers = value; }
         public int RejectedPassengers { get => rejectedPassengers; set => rejectedPassengers = value; }
         public bool HasRoom { get => hasRoom; set => hasRoom = value; }
 
-        public virtual void SetMaxSpeed(int value)
+        public virtual void CalculateHasRoom()
         {
-            if (value <= 40 && value > 0)
-                maxSpeed = value;
-        }
-
-        public virtual bool CalculateHasRoom()
-        {
-            if (seats < currentPassengers)
             if (seats > currentPassengers)
-                return true;
-            return false;
+                HasRoom = true;
+            else
+                HasRoom = false;
         }
-
+        protected void ProcessNegativePassengers(int passengers)
+        {
+            if (Math.Abs(passengers) <= CurrentPassengers)
+            {
+                CurrentPassengers += passengers;
+                HasRoom = true;
+                return;
+            }
+            else
+            {
+                CurrentPassengers = 0;
+                HasRoom = true;
+                return;
+            }
+        }
         public virtual void UploadPassengers(int passengers)
         {
-            if (CalculateHasRoom() == false)
+            if (passengers < 0)
             {
-                Console.WriteLine("Vehicle is Full!!");
+                ProcessNegativePassengers(passengers);
+                return;
+            }
+            CalculateHasRoom();
+            if (!HasRoom)
+            {
+                //Console.WriteLine("Vehicle is Full!!");
                 return;
             }
             if (passengers + currentPassengers <= seats)
                 currentPassengers += passengers;
             else
             {
-                rejrejecetedPassengers = Math.Abs(seats - (currentPassengers + passengers));
                 rejectedPassengers = Math.Abs(seats - (currentPassengers + passengers));
                 currentPassengers = seats;
             }
+            if (currentPassengers == seats)
+                HasRoom = false;
         }
 
         public override string ToString()
         {
-            return $"Line:{line}, Id:{id}, MaxSpead:{maxSpeed}, Seats:{seats}";
-            return $"Vehicle:, Line:{line}, Id:{id}, MaxSpead:{maxSpeed}, Seats:{seats}, Passengers: {CurrentPassengers}";
+            return $"Vehicle: {this.GetType().Name}, Line: {line}, Id: {id}, MaxSpead: {maxSpeed}, Seats: {seats}, Passengers: {CurrentPassengers}";
         }
+
+
     }
 }
