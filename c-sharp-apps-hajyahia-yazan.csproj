@@ -58,6 +58,20 @@
     <Compile Include="Sportapp\SportAppMain.cs" />
     <Compile Include="Sportapp\Team.cs" />
     <Compile Include="Sportapp\TestSportApp.cs" />
+    <Compile Include="Transportationapp\Bus.cs" />
+    <Compile Include="Transportationapp\CargoVehicle.cs" />
+    <Compile Include="Transportationapp\Crone.cs" />
+    <Compile Include="Transportationapp\Driver.cs" />
+    <Compile Include="Transportationapp\IContainable.cs" />
+    <Compile Include="Transportationapp\IPortTable.cs" />
+    <Compile Include="Transportationapp\IShippingPriceCalculator.cs" />
+    <Compile Include="Transportationapp\MonitorTransportation.cs" />
+    <Compile Include="Transportationapp\PassengersAirplain.cs" />
+    <Compile Include="Transportationapp\PassengersTrain.cs" />
+    <Compile Include="Transportationapp\PublicVehicle.cs" />
+    <Compile Include="Transportationapp\ShipCargo.cs" />
+    <Compile Include="Transportationapp\StorageStructure.cs" />
+    <Compile Include="Transportationapp\TrainCargo.cs" />
     <Compile Include="Transportationapp\TransportationAppMain.cs" />
   </ItemGroup>
   <ItemGroup>
