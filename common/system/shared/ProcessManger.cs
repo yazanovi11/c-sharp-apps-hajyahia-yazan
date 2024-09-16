@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using c_sharp_apps_hajyahia_yazan.Banckapp;
 using c_sharp_apps_hajyahia_yazan.Draftapp;
 using c_sharp_apps_hajyahia_yazan.Sportapp;
-using c_sharp_apps_hajyahia_yazan.TransportationApp;
+using c_sharp_apps_hajyahia_yazan.transportation_app;
 
 namespace c_sharp_apps_hajyahia_yazan.common.system.shared
 {
-    internal class ProcessManger
+    public class ProcessManger
     {
         public static void RunMainProcess()
         {

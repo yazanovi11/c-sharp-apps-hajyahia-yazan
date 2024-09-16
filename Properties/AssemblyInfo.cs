@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("c-sharp-apps-hajyahia-yazan")]
+[assembly: AssemblyTitle("c_sharp_apps_hajyahia_yazan")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("c-sharp-apps-hajyahia-yazan")]
+[assembly: AssemblyProduct("c_sharp_apps_hajyahia_yazan")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
